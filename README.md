@@ -1,10 +1,14 @@
-- Prerequisite :
-  <br>
-  Add DNS A record "pma.domain.com"
-  <br>
-  Edit host/hosts in ingress.yaml replace with domain
+Prerequisite : <br>
+1. Set DNS
+<br>
+Add DNS A record "pma.domain.com"
+<br>
+Edit file ingress.yaml in "host/hosts" replace with your domain
 
-- Deploy ingress :
+2. Deploy ingress + ssl : <br>
+Before deploy mysql and PMA. <br>
+First deploy nginx-ingress and letsencrypt from here : <br>
+https://github.com/rendyproklamanta/kubernetes-deployer/tree/main/main
 
 ```
 $ kubectl --kubeconfig=D:\kubeconfig\vultr\test.yaml apply -f ingress.yaml
